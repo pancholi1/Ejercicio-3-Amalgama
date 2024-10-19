@@ -3,7 +3,7 @@ import { AuthProvider } from "./context/AuthProvider";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { PrivateRoute } from "./components/PrivateRoute";
 import HomeScreen from "./components/HomeScreen/HomeScreen";
-import { LoginScreen } from "./components/Login";
+import { LoginScreen } from "./components/LoginScreen";
 
 function App() {
   return (
