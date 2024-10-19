@@ -33,7 +33,7 @@ Este proyecto es una aplicación de React creada para el desafío de autenticaci
 2. Navega al directorio del proyecto:
 
    ```bash
-   cd amalgama-challenge
+   cd Ejercicio-3-Amalgama
    ```
 
 3. Instala las dependencias:
@@ -47,7 +47,7 @@ Este proyecto es una aplicación de React creada para el desafío de autenticaci
 1. Inicia la aplicación:
 
    ```bash
-   npm run dev
+   npm start
    ```
 
 2. Abre tu navegador y ve a `http://localhost:5174`.
