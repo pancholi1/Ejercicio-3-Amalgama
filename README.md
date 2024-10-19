@@ -1,50 +1,74 @@
-# React + TypeScript + Vite
+# Proyecto de Autenticación - Amalgama
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una aplicación de React creada para el desafío de autenticación de **Amalgama**.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite**: Para mejorar el la velocidad de compilacion y desarrollo.
+- **React 18**: La última versión de React, que proporciona características avanzadas y mejoras en el rendimiento.
+- **TypeScript**: Para un desarrollo más seguro y robusto gracias a la tipificación estática.
+- **Context API**: Para manejar el estado global de la aplicación de manera eficiente.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Pantalla de Inicio de Sesión**: Permite a los usuarios autenticarse en la aplicación.
+- **Pantalla Privada**: Accesible únicamente para usuarios autenticados.
 
-- Configure the top-level `parserOptions` property like this:
+## Características
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Pantalla de inicio de sesión con email y password.
+- Manejo de autenticación utilizando Context API.
+- Redirección automática a la pantalla privada después de iniciar sesión.
+- Protección de rutas privadas.
+- Funcionalidad de cierre de sesión.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Instalación
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. Clona este repositorio:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+   ```bash
+   git clone https://github.com/pancholi1/Ejercicio-3-Amalgama.git
+   ```
+
+2. Navega al directorio del proyecto:
+
+   ```bash
+   cd amalgama-challenge
+   ```
+
+3. Instala las dependencias:
+
+   ```bash
+   npm install
+   ```
+
+## Uso
+
+1. Inicia la aplicación:
+
+   ```bash
+   npm run dev
+   ```
+
+2. Abre tu navegador y ve a `http://localhost:5174`.
+
+3. Usa las siguientes credenciales para iniciar sesión:
+   - **Email**: `user@amalgama.co`
+   - **Password**: `password`
+
+## Estructura del Proyecto
+
+- `src/App.tsx`: Configuración de rutas y navegación.
+- `src/context/AuthProvidder.tsx`: Maneja el estado de autenticación utilizando Context API y el patrón Flux.
+- `src/components/PrivateRoute.tsx`: Componente para proteger rutas privadas.
+- `src/components/LoginScreen.tsx`: Componente de la pantalla de inicio de sesión.
+- `src/components/HomeScreen.tsx`: Componente de la pantalla privada.
+
+## Posible Mejoras
+
+- Validación de Formularios
+- Manejo de Sesiones usando localStorage o sessionsStorage para almacenar el token y que persista la sesion en la recarga de la pagina
+- Pruebas unitarias y de integracion utilizando Jest y React Testing Library
+- Mejorar toda la estructura de carpeta, creando Pages, Routes, etc
+- Se podria utilizar redux-toolkit para manejo de estado.
+- Implementar manejo de errores más detallado.

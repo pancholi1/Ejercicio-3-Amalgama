@@ -1,16 +1,16 @@
 import "./App.css";
-import { AuthProvider } from "./context/AuthContext";
+import { AuthProvider } from "./context/AuthProvider";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { Login } from "./components/Login";
 import { PrivateRoute } from "./components/PrivateRoute";
-import HomeScreen from "./components/HomeScreen/PrivateScreen";
+import HomeScreen from "./components/HomeScreen/HomeScreen";
+import { LoginScreen } from "./components/Login";
 
 function App() {
   return (
     <AuthProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginScreen />} />
           <Route
             path="/private"
             element={<PrivateRoute component={<HomeScreen />} />}
