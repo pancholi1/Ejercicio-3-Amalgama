@@ -1,4 +1,4 @@
-# Proyecto de Autenticación - Amalgama
+# Ejercicio 3 - Amalgama
 
 Este proyecto es una aplicación de React creada para el desafío de autenticación de **Amalgama**.
 
